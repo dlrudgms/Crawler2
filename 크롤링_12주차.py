@@ -50,5 +50,21 @@ elif a=='축구':
     for box in boxes:
         title = box.find_element_by_css_selector("a > span").text
         print(title)
+        
+elif a=='농구':
+    driver.get("https://sports.news.naver.com/basketball/index")
+    boxes = driver.find_elements_by_css_selector("#content > div > div.home_grid > div.content > div.home_article > div.home_news > ul > li")
+    print('<추천뉴스>')
+    for box in boxes:
+        title = box.find_element_by_css_selector("a > span").text
+        print(title)
+
+elif a=='배구':
+    driver.get("https://sports.news.naver.com/volleyball/index")
+    boxes = driver.find_elements_by_css_selector("#content > div > div.home_grid > div.content > div.home_article > div.home_news > ul > li")
+    print('<추천뉴스>')
+    for box in boxes:
+        title = box.find_element_by_css_selector("a > span").text
+        print(title)
 
     driver.close()
